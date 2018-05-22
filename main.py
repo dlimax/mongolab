@@ -78,6 +78,7 @@ def get_questions_answereds_by_user(username):
     # 1. obter usuario com users.find() (usando colecao de questoes)
     # 2. separar os ids das questoes do usuario obtido em uma variavel do tipo lista.
     # 3. obter questoes com questions.find() utilizando o operador $in e o parametro a variabel criada em #2  (usando colecao de questoes)
+    pass
     
 
 def search_questions(temas, bancas, disciplinas, ano_min, ano_max):
