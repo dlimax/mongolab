@@ -39,15 +39,13 @@ def get_question(question_id):
     """
     # 1. obter questao com collection.find_one() e retornar
     pass
-        
 
-def answer_question(question_id, resposta):
+
+def search_questions_by_disciplina(disciplinas):
     """
-    responde uma questão de id :question_id com a resposta :resposta
-    retorna True se a resposta for correta; False, caso contrário.
+    realiza uma busca por questoes por disciplinas:
+    retorna as questoes cuja disciplina esteja dentro da *lista* :disciplinas
     """
-    # 1. obter questao com collection.find_one()
-    # 2. comparar a resposta da questao com :resposta    
     pass
 
 
@@ -57,25 +55,33 @@ def new_comment(username, question_id, comment):
     """
     # 1. obter questao com collection.find_one()
     # 2. incluir comentario na questao recuperada. 
-    # 3. atualizar questao com collection.set()
+    # 3. atualizar questao com collection.set() utilizando operador $push caso não seja o primeiro comentário.
     pass
 
-def search_questions_by_disciplina(disciplinas):
+
+def answer_question(user_id, question_id, resposta):
     """
-    realiza uma busca por questoes por disciplinas:
-    retorna as questoes cuja disciplina esteja dentro da *lista* :disciplinas
+    responde uma questão de id :question_id com a resposta :resposta pelo usuario de id :user_id.
+    persiste a resposta na colecao de usuarios.
+    retorna True se a resposta for correta; False, caso contrário.
     """
+    # 1. obter questao com collection.find_one()
+    # 2. comparar a resposta da questao com :resposta    
+    # 3. atualizar questao com collection.set() utilizando operador $push caso não seja o primeiro comentário.    
+    pass
+
+
+def get_questions_answereds_by_user(username):
+    """
+    retorna as questoes respondidas por um usuário
+    """
+    # 1. obter usuario com users.find() (usando colecao de questoes)
+    # 2. separar os ids das questoes do usuario obtido em uma variavel do tipo lista.
+    # 3. obter questoes com questions.find() utilizando o operador $in e o parametro a variabel criada em #2  (usando colecao de questoes)
+    
 
 def search_questions(temas, bancas, disciplinas, ano_min, ano_max):
     """
     realiza uma busca por questoes baseada nos criterios passados como parametros
-    """
-    pass
-
-
-def user_answers(username):
-    """
-    retorna as resposta de um determinado usuário às perguntas.
-    requer que em answer_question seja persistida a resposta do usuário de alguma forma
     """
     pass
